@@ -4,8 +4,8 @@
       {
         "title": "CT Smoke from T-Spawn",
         "description": "Smoke that blocks CT from A site",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/ct-smoke-position.jpg",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/ct-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-lineup.jpg",
         "technique": {
           "jump": true,
           "mouseButton": "l"
@@ -15,8 +15,8 @@
       {
         "title": "Stairs Smoke from T-Spawn",
         "description": "Smoke that blocks stairs from A site",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/stairs-smoke-position.jpg",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/stairs-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/stairs-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/stairs-smoke-lineup.jpg",
         "technique": {
           "jump": true,
           "mouseButton": "l"
@@ -26,8 +26,8 @@
       {
         "title": "Jungle Smoke from T-Spawn",
         "description": "Smoke that blocks jungle / next to Stairs from A site",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/jungle-smoke-position.jpg",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/jungle-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-lineup.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l"
@@ -37,8 +37,8 @@
       {
         "title": "Window Smoke from T-Spawn",
         "description": "Smoke that blocks Window from peeking mid",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/window-smoke-position.jpg",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/window-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/window-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/window-smoke-lineup.jpg",
         "technique": {
           "jump": true,
           "mouseButton": "l"
@@ -50,8 +50,8 @@
       {
         "title": "Lamp Flash",
         "description": "Pop flash for ramp peek",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/lamp-flash-position.jpg",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/lamp-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/lamp-flash-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/lamp-flash-lineup.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l"
@@ -61,8 +61,8 @@
       {
         "title": "Connector Flash from Top Mid",
         "description": "Pop Flash for peeking Connector as T",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/connector-flash-position.jpg",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/connector-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/connector-flash-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/connector-flash-lineup.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l"
@@ -72,8 +72,8 @@
       {
         "title": "B-Site Flash from T-Apps",
         "description": "Pop Flash against Short/B-Site while rushing",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/apps-flash-lineup.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/apps-flash-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/apps-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/apps-flash-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l"
