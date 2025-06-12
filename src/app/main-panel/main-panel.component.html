@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="header">
+        <h1>CS2 Utility Master</h1>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="section-title">Utilities</div>
+            <div class="utility-grid">
+                <div
+                    *ngFor="let utility of utilities"
+                    class="utility-card"
+                    [class.active]="currentUtility === utility.key"
+                    (click)="selectUtility(utility.key)">
+                    <span class="utility-icon">{{utility.icon}}</span>
+                    <div>{{utility.name}}</div>
+                    <div class="utility-count">{{getUtilityCount(utility.key)}}</div>
+                </div>
+            </div>
+
+            <div class="map-selector">
+                <div class="section-title">Maps</div>
+                <div class="map-grid">
+                    <button
+                        *ngFor="let map of maps"
+                        class="map-btn"
+                        [class.active]="currentMap === map.key"
+                        (click)="selectMap(map.key)">
+                        {{map.name}}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="section-title">{{getContentTitle()}}</div>
+            <div class="lineups-container">
+                <div *ngIf="currentLineups.length === 0" class="no-lineups">
+                    <p>No lineups available for this combination yet. Check back soon!</p>
+                </div>
+
+                <div *ngFor="let lineup of currentLineups" class="lineup-card">
+                    <div class="lineup-header">
+                        <div class="lineup-info">
+                            <div class="lineup-title">{{lineup.title}}</div>
+                            <div class="lineup-description">{{lineup.description}}</div>
+                        </div>
+                        <div class="lineup-tags">
+                            <div class="technique-tags">
+                                <span class="tag jump-tag" *ngIf="lineup.technique.jump">
+                                    <span class="tag-icon">↑</span>
+                                    <span class="tag-label">Jump</span>
+                                </span>
+                                <span class="tag mouse-tag">
+                                    <span class="tag-icon">{{getMouseButtonIcon(lineup.technique.mouseButton)}}</span>
+                                </span>
+                            </div>
+                            <div class="movement-tag">
+                                <span class="tag">
+                                    <span class="tag-icon">👟</span>
+                                    <span class="tag-label">{{getMovementText(lineup.movement)}}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-images">
+                        <div class="lineup-main-image">
+                            <img #mainImg
+                                 [src]="lineup.lineupImage"
+                                 [alt]="lineup.title + ' lineup'"
+                                 class="lineup-screenshot"
+                                 [ngStyle]="getMainImageStyle(lineup, mainImg.src)">
+                        </div>
+                        <div class="position-image" (click)="toggleImage(lineup, $event)">
+                            <img #posImg
+                                 [src]="lineup.positionImage"
+                                 [alt]="lineup.title + ' position'"
+                                 class="position-screenshot"
+                                 [ngStyle]="getSmallImageStyle(lineup, mainImg.src)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,280 @@
+{
+  "mirage": {
+    "smokes": [
+      {
+        "title": "CT Smoke from T-Spawn",
+        "description": "Smoke that blocks CT from A site",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/ct-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/ct-smoke-lineup.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Stairs Smoke from T-Spawn",
+        "description": "Smoke that blocks stairs from A site",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/stairs-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/stairs-smoke-lineup.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Jungle Smoke from T-Spawn",
+        "description": "Smoke that blocks jungle / next to Stairs from A site",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/jungle-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/jungle-smoke-lineup.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Window Smoke from T-Spawn",
+        "description": "Smoke that blocks Window from peeking mid",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/window-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/window-smoke-lineup.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l"
+        },
+        "movement": "w"
+      }
+    ],
+    "flashes": [
+      {
+        "title": "Lamp Flash",
+        "description": "Pop flash for ramp peek",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/lamp-flash-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/lamp-flash-lineup.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Connector Flash from Top Mid",
+        "description": "Pop Flash for peeking Connector as T",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/connector-flash-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/connector-flash-lineup.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "B-Site Flash from T-Apps",
+        "description": "Pop Flash against Short/B-Site while rushing",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/apps-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/mirage/apps-flash-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "r"
+      }
+    ],
+    "he": [],
+    "molotov": []
+  },
+  "dust2": {
+    "smokes": [
+      {
+        "title": "Mid-Doors Smoke from T-Spawn",
+        "description": "Mid-Doors Smoke that also block seight to short",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Long Doors Smoke from CT-Spawn",
+        "description": "fast door smoke for fighting long",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Long-Corner Smoke from T-Spawn",
+        "description": "Smoke that blocks long corner for potential AWP",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "CT-Cross-Smoke from XBox",
+        "description": "Smoke for safely crossing CT",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "B Doors Smoke from Tunnel",
+        "description": "Doors smoke for blocking seight of AWP Mid",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "First Short Smoke from Short",
+        "description": "First of 2 smokes for taking a from short",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Second Short Smoke from Short",
+        "description": "Second of 2 smokes for taking a from short",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      }
+    ],
+    "flashes": [
+      {
+        "title": "Short Flash from lower tunnel",
+        "description": "Flash for taking short",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Long Flash from CT #1",
+        "description": "Flash for supporting mates who take long",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Long Flash from CT #2",
+        "description": "Flash for supporting mates who take long",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "B-Spot Flash from Tunnel",
+        "description": "Flash for taking B from Tunnel",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      }
+    ],
+    "he": [
+      {
+        "title": "Mid Cross HE",
+        "description": "HE Grenade for CTs to safely cross mid",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      }
+    ],
+    "molotov": [
+      {
+        "title": "Short Molotov from Toxic",
+        "description": "Molotov from Toxic which prevents CT from rushing short",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "Blue Molotov from Long",
+        "description": "Molotov for Blue to prevent Ts from crossing",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      },
+      {
+        "title": "A-Site Molotov from Short",
+        "description": "Molotov from Short for taking A-Site",
+        "lineupImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://picsum.photos/300/200?random=3",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l"
+        },
+        "movement": "s"
+      }
+    ]
+  },
+  "inferno": {
+    "smokes": [],
+    "flashes": [],
+    "he": [],
+    "molotov": []
+  },
+  "anubis": {
+    "smokes": [],
+    "flashes": [],
+    "he": [],
+    "molotov": []
+  },
+  "ancient": {
+    "smokes": [],
+    "flashes": [],
+    "he": [],
+    "molotov": []
+  }
+}

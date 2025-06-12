@@ -1,0 +1,163 @@
+<div class="admin-container">
+  <div class="admin-header">
+    <h1>Admin Panel</h1>
+    <p>Manage nade lineups in the database</p>
+  </div>
+
+  <div class="admin-content">
+    <!-- Existing Entries Section -->
+    <div class="form-section">
+      <h2>Existing Entries ({{filteredEntries.length}} total)</h2>
+
+      <div class="filters">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mapFilter">Filter by Map</label>
+            <select id="mapFilter" [value]="selectedMapFilter" (change)="selectedMapFilter = $any($event.target).value; onFilterChange()" class="form-control">
+              <option value="all">All Maps</option>
+              <option *ngFor="let map of maps" [value]="map.key">{{map.name}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="utilityFilter">Filter by Utility</label>
+            <select id="utilityFilter" [value]="selectedUtilityFilter" (change)="selectedUtilityFilter = $any($event.target).value; onFilterChange()" class="form-control">
+              <option value="all">All Utilities</option>
+              <option *ngFor="let utility of utilities" [value]="utility.key">{{utility.name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="isLoading" class="loading">Loading entries...</div>
+
+      <div *ngIf="!isLoading && filteredEntries.length === 0" class="no-entries">
+        No entries found. Add some lineups to get started!
+      </div>
+
+      <div *ngIf="!isLoading && filteredEntries.length > 0" class="entries-list">
+        <div *ngFor="let entry of filteredEntries" class="entry-card">
+          <div class="entry-header">
+            <h3>{{entry.title}}</h3>
+            <button class="btn-delete" (click)="deleteEntry(entry)" title="Delete Entry">
+              ×
+            </button>
+          </div>
+
+          <div class="entry-details">
+            <div class="entry-meta">
+              <span class="badge map-badge">{{getMapName(entry.map)}}</span>
+              <span class="badge utility-badge">{{getUtilityName(entry.utility)}}</span>
+            </div>
+
+            <p class="entry-description">{{entry.description}}</p>
+
+            <div class="entry-technique">
+              <span class="technique-item" *ngIf="entry.technique.jump">
+                <strong>Jump:</strong> Required
+              </span>
+              <span class="technique-item">
+                <strong>Mouse:</strong> {{getMouseButtonName(entry.technique.mouseButton)}}
+              </span>
+              <span class="technique-item">
+                <strong>Movement:</strong> {{getMovementName(entry.movement)}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add New Entry Form -->
+    <form [formGroup]="nadeForm" (ngSubmit)="onSubmit()" class="nade-form">
+      <div class="form-section">
+        <h2>Add New Entry</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="map">Map</label>
+            <select id="map" formControlName="map" class="form-control">
+              <option *ngFor="let map of maps" [value]="map.key">{{map.name}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="utility">Utility Type</label>
+            <select id="utility" formControlName="utility" class="form-control">
+              <option *ngFor="let utility of utilities" [value]="utility.key">{{utility.name}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" formControlName="title" class="form-control"
+                 placeholder="e.g., CT Smoke from T-Spawn">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" formControlName="description" class="form-control"
+                    rows="3" placeholder="Describe the lineup and its purpose"></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Images (Optional)</h2>
+
+        <div class="form-group">
+          <label for="lineupImage">Lineup Image URL</label>
+          <input type="url" id="lineupImage" formControlName="lineupImage" class="form-control"
+                 placeholder="Leave empty for default image">
+        </div>
+
+        <div class="form-group">
+          <label for="positionImage">Position Image URL</label>
+          <input type="url" id="positionImage" formControlName="positionImage" class="form-control"
+                 placeholder="Leave empty for default image">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Technique</h2>
+
+        <div class="form-row">
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" formControlName="jump" class="checkbox">
+              <span class="checkmark"></span>
+              Requires Jump
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="mouseButton">Mouse Button</label>
+            <select id="mouseButton" formControlName="mouseButton" class="form-control">
+              <option *ngFor="let button of mouseButtons" [value]="button.key">{{button.name}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="movement">Movement</label>
+            <select id="movement" formControlName="movement" class="form-control">
+              <option *ngFor="let movement of movements" [value]="movement.key">{{movement.name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" [disabled]="!nadeForm.valid" class="btn btn-primary">
+          Add Lineup
+        </button>
+        <button type="button" (click)="exportData()" class="btn btn-secondary">
+          Export Data
+        </button>
+      </div>
+    </form>
+
+    <div *ngIf="message" class="message" [class.success]="message.includes('Successfully')">
+      {{message}}
+    </div>
+  </div>
+</div>
