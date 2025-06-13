@@ -265,8 +265,8 @@
       {
         "title": "Short Molotov from Toxic",
         "description": "Molotov from Toxic which prevents CT from rushing short",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/short-molly-lineup.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/short-molly-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-molly-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-molly-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
@@ -278,8 +278,8 @@
       {
         "title": "Blue Molotov from Long",
         "description": "Molotov for Blue to prevent Ts from crossing",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/blue-molly-lineup.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/blue-molly-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/blue-molly-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/blue-molly-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
@@ -291,8 +291,8 @@
       {
         "title": "A-Site Molotov from Short",
         "description": "Molotov from Short for taking A-Site",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/a-site-molotov-lineup.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/a-site-molotov-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/a-site-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/a-site-molotov-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
