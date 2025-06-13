@@ -8,9 +8,11 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-lineup.jpg",
         "technique": {
           "jump": true,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Stairs Smoke from T-Spawn",
@@ -19,9 +21,11 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/stairs-smoke-lineup.jpg",
         "technique": {
           "jump": true,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Jungle Smoke from T-Spawn",
@@ -30,9 +34,11 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-lineup.jpg",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Window Smoke from T-Spawn",
@@ -41,9 +47,11 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/window-smoke-lineup.jpg",
         "technique": {
           "jump": true,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "w"
+        "movement": "w",
+        "url": ""
       }
     ],
     "flashes": [
@@ -54,9 +62,11 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/lamp-flash-lineup.jpg",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Connector Flash from Top Mid",
@@ -65,9 +75,11 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/connector-flash-lineup.jpg",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "B-Site Flash from T-Apps",
@@ -76,9 +88,11 @@
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/apps-flash-position.jpg",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "r"
+        "movement": "r",
+        "url": ""
       }
     ],
     "he": [],
@@ -92,76 +106,103 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/mid-doors-smoke01-lineup.jpg",
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/mid-doors-smoke01-position.jpg",
         "technique": {
-          "jump": false,
-          "mouseButton": "l"
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Mid-Doors Smoke from Toxic",
+        "description": "Mid-Doors Smoke that also block seight to short",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/mid-doors-smoke02-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/mid-doors-smoke02-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Long Doors Smoke from CT-Spawn",
         "description": "fast door smoke for fighting long",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-doors-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-doors-smoke-position.jpg",
         "technique": {
-          "jump": false,
-          "mouseButton": "l"
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Long-Corner Smoke from T-Spawn",
         "description": "Smoke that blocks long corner for potential AWP",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-corner-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-corner-smoke-position.jpg",
         "technique": {
-          "jump": false,
-          "mouseButton": "l"
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "CT-Cross-Smoke from XBox",
         "description": "Smoke for safely crossing CT",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/ct-cross-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/ct-cross-smoke-position.jpg",
         "technique": {
-          "jump": false,
-          "mouseButton": "l"
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": true
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "B Doors Smoke from Tunnel",
         "description": "Doors smoke for blocking seight of AWP Mid",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/b-doors-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/b-doors-smoke-position.jpg",
         "technique": {
-          "jump": false,
-          "mouseButton": "l"
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "First Short Smoke from Short",
         "description": "First of 2 smokes for taking a from short",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-smoke01-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-smoke01-position.jpg",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Second Short Smoke from Short",
         "description": "Second of 2 smokes for taking a from short",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-smoke02-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-smoke02-position.jpg",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       }
     ],
     "flashes": [
@@ -172,9 +213,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Long Flash from CT #1",
@@ -183,9 +226,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Long Flash from CT #2",
@@ -194,9 +239,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "B-Spot Flash from Tunnel",
@@ -205,9 +252,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       }
     ],
     "he": [
@@ -218,9 +267,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       }
     ],
     "molotov": [
@@ -231,9 +282,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "Blue Molotov from Long",
@@ -242,9 +295,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       },
       {
         "title": "A-Site Molotov from Short",
@@ -253,9 +308,11 @@
         "positionImage": "https://picsum.photos/300/200?random=3",
         "technique": {
           "jump": false,
-          "mouseButton": "l"
+          "mouseButton": "l",
+          "crouch": false
         },
-        "movement": "s"
+        "movement": "s",
+        "url": ""
       }
     ]
   },
