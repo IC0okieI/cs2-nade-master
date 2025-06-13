@@ -260,52 +260,39 @@
       }
     ],
     "he": [
-      {
-        "title": "Mid Cross HE",
-        "description": "HE Grenade for CTs to safely cross mid",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
-        "technique": {
-          "jump": false,
-          "mouseButton": "l",
-          "crouch": false
-        },
-        "movement": "s",
-        "url": ""
-      }
     ],
     "molotov": [
       {
         "title": "Short Molotov from Toxic",
         "description": "Molotov from Toxic which prevents CT from rushing short",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/short-molly-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/short-molly-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
           "crouch": false
         },
-        "movement": "s",
+        "movement": "r",
         "url": ""
       },
       {
         "title": "Blue Molotov from Long",
         "description": "Molotov for Blue to prevent Ts from crossing",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/blue-molly-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/blue-molly-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
           "crouch": false
         },
-        "movement": "s",
+        "movement": "r",
         "url": ""
       },
       {
         "title": "A-Site Molotov from Short",
         "description": "Molotov from Short for taking A-Site",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/a-site-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/a-site-molotov-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
