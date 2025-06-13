@@ -89,8 +89,8 @@
       {
         "title": "Mid-Doors Smoke from T-Spawn",
         "description": "Mid-Doors Smoke that also block seight to short",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/mid-doors-smoke01-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/mid-doors-smoke01-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l"
