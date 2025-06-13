@@ -27,6 +27,14 @@ interface FlattenedEntry extends Lineup {
   index: number;
 }
 
+interface GroupedNade {
+  baseName: string;
+  lineupImage?: string;
+  positionImage?: string;
+  hasLineup: boolean;
+  hasPosition: boolean;
+}
+
 @Component({
   selector: 'app-admin-panel',
   standalone: true,
@@ -45,6 +53,17 @@ export class AdminPanelComponent implements OnInit {
   // Filter properties
   selectedMapFilter = 'all';
   selectedUtilityFilter = 'all';
+
+  // File explorer properties
+  showFileExplorer = false;
+  currentImageField = '';
+  availableImages: string[] = [];
+  groupedNades: GroupedNade[] = [];
+  allScannedImages: string[] = [];
+  selectedDirectory = '';
+  imageDirectory = '';
+  imageDirectoryHandle: any = null;
+  imagePathPrefix = '';
 
   // Temporal state storage for form values
   private lastMap = 'mirage';
@@ -80,6 +99,8 @@ export class AdminPanelComponent implements OnInit {
   constructor(private fb: FormBuilder, private http: HttpClient) {
     // Load saved preferences from localStorage
     this.loadTemporalState();
+    this.loadImageDirectory();
+    this.loadImagePathPrefix();
 
     this.nadeForm = this.fb.group({
       map: [this.lastMap, Validators.required],
@@ -129,6 +150,66 @@ export class AdminPanelComponent implements OnInit {
       console.log('Saved temporal state:', state);
     } catch (error) {
       console.warn('Failed to save temporal state:', error);
+    }
+  }
+
+  private loadImageDirectory() {
+    try {
+      const saved = localStorage.getItem('imageDirectory');
+      if (saved) {
+        this.imageDirectory = saved;
+        console.log('Loaded image directory:', saved);
+      }
+    } catch (error) {
+      console.warn('Failed to load image directory:', error);
+    }
+  }
+
+  private saveImageDirectory() {
+    try {
+      localStorage.setItem('imageDirectory', this.imageDirectory);
+      console.log('Saved image directory:', this.imageDirectory);
+    } catch (error) {
+      console.warn('Failed to save image directory:', error);
+    }
+  }
+
+  private loadImagePathPrefix() {
+    try {
+      const saved = localStorage.getItem('imagePathPrefix');
+      if (saved) {
+        this.imagePathPrefix = saved;
+        console.log('Loaded image path prefix:', saved);
+      }
+    } catch (error) {
+      console.warn('Failed to load image path prefix:', error);
+    }
+  }
+
+  private saveImagePathPrefix() {
+    try {
+      localStorage.setItem('imagePathPrefix', this.imagePathPrefix);
+      console.log('Saved image path prefix:', this.imagePathPrefix);
+    } catch (error) {
+      console.warn('Failed to save image path prefix:', error);
+    }
+  }
+
+  async selectImageDirectory() {
+    if ('showDirectoryPicker' in window) {
+      try {
+        this.imageDirectoryHandle = await (window as any).showDirectoryPicker();
+        this.imageDirectory = this.imageDirectoryHandle.name;
+        this.saveImageDirectory();
+        this.message = `Image directory set to: ${this.imageDirectory}`;
+      } catch (error) {
+        if ((error as any).name !== 'AbortError') {
+          console.error('Directory picker failed:', error);
+          this.message = 'Failed to select directory';
+        }
+      }
+    } else {
+      this.message = 'Directory picker not supported in this browser. Use Chrome/Edge.';
     }
   }
 
@@ -206,6 +287,11 @@ export class AdminPanelComponent implements OnInit {
     return this.movements.find(m => m.key === key)?.name || key;
   }
 
+  onImagePathPrefixChange(event: any) {
+    this.imagePathPrefix = event.target.value;
+    this.saveImagePathPrefix();
+  }
+
   onSubmit() {
     if (this.nadeForm.valid) {
       const formValue = this.nadeForm.value;
@@ -215,11 +301,31 @@ export class AdminPanelComponent implements OnInit {
       this.lastUtility = formValue.utility;
       this.saveTemporalState();
 
+      // Apply prefix to image paths if they don't already have it
+      let lineupImage = formValue.lineupImage;
+      let positionImage = formValue.positionImage;
+
+      if (lineupImage && this.imagePathPrefix && !lineupImage.startsWith('http')) {
+        const cleanPrefix = this.imagePathPrefix.replace(/\/$/, '');
+        if (!lineupImage.startsWith(cleanPrefix)) {
+          const cleanImagePath = lineupImage.replace(/^\//, '');
+          lineupImage = `${cleanPrefix}/${cleanImagePath}`;
+        }
+      }
+
+      if (positionImage && this.imagePathPrefix && !positionImage.startsWith('http')) {
+        const cleanPrefix = this.imagePathPrefix.replace(/\/$/, '');
+        if (!positionImage.startsWith(cleanPrefix)) {
+          const cleanImagePath = positionImage.replace(/^\//, '');
+          positionImage = `${cleanPrefix}/${cleanImagePath}`;
+        }
+      }
+
       const newLineup: Lineup = {
         title: formValue.title,
         description: formValue.description,
-        lineupImage: formValue.lineupImage || 'https://picsum.photos/600/400?random=4',
-        positionImage: formValue.positionImage || 'https://picsum.photos/300/200?random=3',
+        lineupImage: lineupImage || 'https://picsum.photos/600/400?random=4',
+        positionImage: positionImage || 'https://picsum.photos/300/200?random=3',
         technique: {
           jump: formValue.jump,
           mouseButton: formValue.mouseButton
@@ -295,5 +401,210 @@ export class AdminPanelComponent implements OnInit {
       link.click();
       URL.revokeObjectURL(url);
     }
+  }
+
+  getUtilityFilterKeyword(utility: string): string {
+    const utilityKeywords: { [key: string]: string } = {
+      'smokes': 'smoke',
+      'flashes': 'flash',
+      'he': 'he|grenade',
+      'molotov': 'molotov|incendiary'
+    };
+    return utilityKeywords[utility] || utility;
+  }
+
+  private groupImagesByBaseName(images: string[]): GroupedNade[] {
+    const grouped: { [baseName: string]: GroupedNade } = {};
+
+    images.forEach(imagePath => {
+      const fileName = imagePath.split('/').pop() || imagePath;
+      const nameWithoutExt = fileName.replace(/\.(jpg|jpeg|png|gif|bmp|webp)$/i, '');
+
+      let baseName = nameWithoutExt;
+      let isLineup = false;
+      let isPosition = false;
+
+      if (nameWithoutExt.endsWith('-lineup')) {
+        baseName = nameWithoutExt.replace(/-lineup$/, '');
+        isLineup = true;
+      } else if (nameWithoutExt.endsWith('-position')) {
+        baseName = nameWithoutExt.replace(/-position$/, '');
+        isPosition = true;
+      }
+
+      if (!grouped[baseName]) {
+        grouped[baseName] = {
+          baseName,
+          hasLineup: false,
+          hasPosition: false
+        };
+      }
+
+      if (isLineup) {
+        grouped[baseName].lineupImage = imagePath;
+        grouped[baseName].hasLineup = true;
+      } else if (isPosition) {
+        grouped[baseName].positionImage = imagePath;
+        grouped[baseName].hasPosition = true;
+      }
+    });
+
+    return Object.values(grouped).filter(nade => nade.hasLineup || nade.hasPosition);
+  }
+
+  private filterImagesByUtility(images: string[], utility: string): string[] {
+    if (!utility || utility === 'all') {
+      return images;
+    }
+
+    const keyword = this.getUtilityFilterKeyword(utility);
+    const regex = new RegExp(keyword, 'i');
+
+    return images.filter(imageName => {
+      const fileName = imageName.toLowerCase();
+      return regex.test(fileName);
+    });
+  }
+
+  async scanDirectoryForImages() {
+    if (!this.imageDirectoryHandle) {
+      this.availableImages = ['No directory selected'];
+      return;
+    }
+
+    this.allScannedImages = [];
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp'];
+
+    try {
+      // Scan the main directory
+      await this.scanDirectory(this.imageDirectoryHandle, '', imageExtensions);
+
+      if (this.allScannedImages.length === 0) {
+        this.availableImages = ['No image files found in selected directory'];
+        this.groupedNades = [];
+      } else {
+        this.allScannedImages.sort();
+
+        const currentUtility = this.nadeForm.get('utility')?.value;
+        const filteredImages = this.filterImagesByUtility(this.allScannedImages, currentUtility);
+
+        this.groupedNades = this.groupImagesByBaseName(filteredImages);
+
+        if (this.groupedNades.length === 0) {
+          this.availableImages = [`No grouped nades found for "${this.getUtilityName(currentUtility)}" (searched for "${this.getUtilityFilterKeyword(currentUtility)}")`];
+        } else {
+          // Create display names for the grouped nades
+          this.availableImages = this.groupedNades.map(nade => {
+            const status = [];
+            if (nade.hasLineup) status.push('lineup');
+            if (nade.hasPosition) status.push('position');
+            return `${nade.baseName} (${status.join(', ')})`;
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Error scanning directory:', error);
+      this.availableImages = ['Error scanning directory: ' + (error as any).message];
+      this.groupedNades = [];
+    }
+  }
+
+  private async scanDirectory(dirHandle: any, relativePath: string, imageExtensions: string[]) {
+    try {
+      for await (const entry of dirHandle.values()) {
+        const fullPath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+
+        if (entry.kind === 'file') {
+          const fileName = entry.name.toLowerCase();
+          if (imageExtensions.some(ext => fileName.endsWith(ext))) {
+            this.allScannedImages.push(fullPath);
+          }
+        } else if (entry.kind === 'directory') {
+          // Recursively scan subdirectories (limit depth to avoid infinite loops)
+          const depth = relativePath.split('/').length;
+          if (depth < 3) { // Max 3 levels deep
+            await this.scanDirectory(entry, fullPath, imageExtensions);
+          }
+        }
+      }
+    } catch (error) {
+      console.warn('Error scanning subdirectory:', relativePath, error);
+    }
+  }
+
+  selectImage(displayName: string) {
+    if (displayName.startsWith('No') ||
+        displayName.startsWith('Error') ||
+        displayName.startsWith('Please select')) {
+      return;
+    }
+
+    // Find the corresponding grouped nade
+    const selectedIndex = this.availableImages.indexOf(displayName);
+    if (selectedIndex === -1 || selectedIndex >= this.groupedNades.length) {
+      return;
+    }
+
+    const selectedNade = this.groupedNades[selectedIndex];
+
+    // Apply prefix to both image paths
+    let lineupPath = '';
+    let positionPath = '';
+
+    if (selectedNade.lineupImage) {
+      lineupPath = this.applyPrefixToPath(selectedNade.lineupImage);
+    }
+
+    if (selectedNade.positionImage) {
+      positionPath = this.applyPrefixToPath(selectedNade.positionImage);
+    }
+
+    // Set both form controls
+    if (lineupPath) {
+      this.nadeForm.get('lineupImage')?.setValue(lineupPath);
+    }
+    if (positionPath) {
+      this.nadeForm.get('positionImage')?.setValue(positionPath);
+    }
+
+    this.closeFileExplorer();
+
+    // Show confirmation message
+    const setPaths = [];
+    if (lineupPath) setPaths.push('lineup');
+    if (positionPath) setPaths.push('position');
+    this.message = `Set ${setPaths.join(' and ')} image(s) for: ${selectedNade.baseName}`;
+  }
+
+  private applyPrefixToPath(imagePath: string): string {
+    if (this.imagePathPrefix) {
+      const cleanPrefix = this.imagePathPrefix.replace(/\/$/, '');
+      const cleanImageName = imagePath.replace(/^\//, '');
+      return `${cleanPrefix}/${cleanImageName}`;
+    }
+    return imagePath;
+  }
+
+  async openFileExplorer(fieldName: string) {
+    this.currentImageField = fieldName;
+    this.showFileExplorer = true;
+
+    if (this.imageDirectoryHandle) {
+      this.selectedDirectory = this.imageDirectory;
+      await this.scanDirectoryForImages();
+    } else {
+      this.selectedDirectory = 'No directory selected';
+      this.availableImages = [
+        'Please select an image directory first using the "Select Image Directory" button above.'
+      ];
+    }
+  }
+
+  closeFileExplorer() {
+    this.showFileExplorer = false;
+    this.currentImageField = '';
+    this.availableImages = [];
+    this.groupedNades = [];
+    this.selectedDirectory = '';
   }
 }

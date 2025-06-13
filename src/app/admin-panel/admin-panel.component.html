@@ -4,7 +4,69 @@
     <p>Manage nade lineups in the database</p>
   </div>
 
+  <!-- File Explorer Popup -->
+  <div *ngIf="showFileExplorer" class="file-explorer-overlay" (click)="closeFileExplorer()">
+    <div class="file-explorer-popup" (click)="$event.stopPropagation()">
+      <div class="file-explorer-header">
+        <h3>Select Nade Images</h3>
+        <button class="close-btn" (click)="closeFileExplorer()">×</button>
+      </div>
+
+      <div class="file-explorer-content">
+        <div class="directory-info">
+          <strong>Directory:</strong> {{selectedDirectory}}
+        </div>
+
+        <div class="utility-filter-info" *ngIf="nadeForm.get('utility')?.value">
+          <span class="filter-label">Filtered for:</span>
+          <span class="filter-value">{{getUtilityName(nadeForm.get('utility')?.value)}} (searching for "{{getUtilityFilterKeyword(nadeForm.get('utility')?.value)}})"</span>
+        </div>
+
+        <div class="nade-selection-help">
+          <small>Select a nade to automatically set both lineup and position images (if available)</small>
+        </div>
+
+        <div class="file-list">
+          <div *ngFor="let image of availableImages"
+               class="file-item"
+               [class.disabled]="image.startsWith('No') || image.startsWith('Error') || image.startsWith('Please select')"
+               (click)="selectImage(image)">
+            <span class="file-icon">🎯</span>
+            <span class="file-name">{{image}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="admin-content">
+    <!-- Image Directory Configuration -->
+    <div class="form-section">
+      <h2>Image Directory Configuration</h2>
+      <p class="directory-help">Select the folder containing your nade lineup images and set the path prefix for the JSON data.</p>
+
+      <div class="directory-config">
+        <div class="directory-display">
+          <span class="directory-label">Current Directory:</span>
+          <span class="directory-path">{{imageDirectory || 'No directory selected'}}</span>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="selectImageDirectory()">
+          Select Image Directory
+        </button>
+      </div>
+
+      <div class="form-group" style="margin-top: 20px;">
+        <label for="imagePathPrefix">Image Path Prefix</label>
+        <input type="text"
+               id="imagePathPrefix"
+               [value]="imagePathPrefix"
+               (input)="onImagePathPrefixChange($event)"
+               class="form-control"
+               placeholder="e.g., assets/images or https://example.com/images">
+        <small class="prefix-help">This prefix will be added to image paths when saving to JSON (e.g., "assets/images" + "/" + "dust2/smoke.jpg" = "assets/images/dust2/smoke.jpg")</small>
+      </div>
+    </div>
+
     <!-- Existing Entries Section -->
     <div class="form-section">
       <h2>Existing Entries ({{filteredEntries.length}} total)</h2>
@@ -104,17 +166,28 @@
 
       <div class="form-section">
         <h2>Images (Optional)</h2>
+        <p class="images-help">Click "Browse Nades" to select grouped lineup and position images automatically.</p>
 
         <div class="form-group">
-          <label for="lineupImage">Lineup Image URL</label>
-          <input type="url" id="lineupImage" formControlName="lineupImage" class="form-control"
-                 placeholder="Leave empty for default image">
+          <label for="lineupImage">Lineup Image</label>
+          <div class="image-input-group">
+            <input type="text" id="lineupImage" formControlName="lineupImage" class="form-control"
+                   placeholder="Image path or URL" readonly>
+            <button type="button" class="btn-browse" (click)="openFileExplorer('images')">
+              Browse Nades
+            </button>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="positionImage">Position Image URL</label>
-          <input type="url" id="positionImage" formControlName="positionImage" class="form-control"
-                 placeholder="Leave empty for default image">
+          <label for="positionImage">Position Image</label>
+          <div class="image-input-group">
+            <input type="text" id="positionImage" formControlName="positionImage" class="form-control"
+                   placeholder="Image path or URL" readonly>
+            <button type="button" class="btn-browse-alt" (click)="openFileExplorer('images')">
+              Browse Nades
+            </button>
+          </div>
         </div>
       </div>
 
