@@ -209,10 +209,10 @@
       {
         "title": "Short Flash from lower tunnel",
         "description": "Flash for taking short",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/short-flash-position.jpg",
         "technique": {
-          "jump": false,
+          "jump": true,
           "mouseButton": "l",
           "crouch": false
         },
@@ -222,8 +222,8 @@
       {
         "title": "Long Flash from CT #1",
         "description": "Flash for supporting mates who take long",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup01.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup01.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
@@ -235,10 +235,10 @@
       {
         "title": "Long Flash from CT #2",
         "description": "Flash for supporting mates who take long",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup02.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup02.jpg",
         "technique": {
-          "jump": false,
+          "jump": true,
           "mouseButton": "l",
           "crouch": false
         },
@@ -248,14 +248,14 @@
       {
         "title": "B-Spot Flash from Tunnel",
         "description": "Flash for taking B from Tunnel",
-        "lineupImage": "https://picsum.photos/600/400?random=4",
-        "positionImage": "https://picsum.photos/300/200?random=3",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/b-spot-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/b-spot-flash-position.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
           "crouch": false
         },
-        "movement": "s",
+        "movement": "r",
         "url": ""
       }
     ],
