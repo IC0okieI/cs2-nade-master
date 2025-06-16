@@ -81,6 +81,12 @@
                                  class="position-screenshot"
                                  [ngStyle]="getSmallImageStyle(lineup, mainImg.src)">
                         </div>
+                        <div *ngIf="hasYouTubeUrl(lineup)"
+                             class="youtube-icon"
+                             (click)="openYouTubeUrl(lineup)"
+                             title="Watch on YouTube">
+                            <img src="youtube.svg" alt="YouTube">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -347,6 +347,31 @@
     min-height: 350px;
 }
 
+.youtube-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.youtube-icon:hover {
+    transform: scale(1.1);
+}
+
+.youtube-icon img {
+    width: 60px;
+    height: 60px;
+    filter: brightness(0) invert(1);
+}
+
 .lineup-main-image {
     width: 100%;
     overflow: hidden;

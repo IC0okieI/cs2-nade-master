@@ -10,8 +10,10 @@ interface Lineup {
   technique: {
     jump: boolean;
     mouseButton: 'l' | 'r' | 'lr';
+    crouch: boolean;
   };
   movement: 's' | 'w' | 'r';
+  url: string;
 }
 
 interface UtilityData {
@@ -202,6 +204,18 @@ export class MainPanelComponent implements OnInit {
     this.isDarkMode = !this.isDarkMode;
     this.applyTheme();
     localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  }
+
+  hasYouTubeUrl(lineup: Lineup): boolean {
+    // check if the url field has a string or if it was ""
+    return lineup.url != null && lineup.url.trim() !== '';
+  }
+
+  openYouTubeUrl(lineup: Lineup) {
+    const youtubeUrl = lineup.url;
+    if (youtubeUrl) {
+      window.open(youtubeUrl, '_blank');
+    }
   }
 
   private loadSavedTheme() {
