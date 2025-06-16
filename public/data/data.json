@@ -456,7 +456,7 @@
         "technique": {
           "jump": true,
           "mouseButton": "l",
-          "crouch": false
+          "crouch": true
         },
         "movement": "s",
         "url": ""
