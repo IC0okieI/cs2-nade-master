@@ -12,7 +12,7 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY"
       },
       {
         "title": "Stairs Smoke from T-Spawn",
@@ -92,7 +92,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=14s"
       }
     ],
     "he": [],
@@ -111,7 +111,7 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=19s"
       },
       {
         "title": "Mid-Doors Smoke from Toxic",
@@ -256,7 +256,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=34s"
       }
     ],
     "he": [],
@@ -285,7 +285,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=41s"
       },
       {
         "title": "A-Site Molotov from Short",
@@ -327,7 +327,7 @@
           "crouch": false
         },
         "movement": "w",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=89s"
       },
       {
         "title": "Instant Mid Smoke from CT Spawn #4",
@@ -340,7 +340,7 @@
           "crouch": false
         },
         "movement": "w",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=100s"
       },
       {
         "title": "B-Long Smoke from B-Main",
@@ -392,7 +392,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=72s"
       },
       {
         "title": "Donut Smoke from A-Main",
@@ -431,7 +431,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=57s"
       },
       {
         "title": "Heaven Smoke from T-Spawn",
@@ -500,7 +500,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=112s"
       }
     ],
     "molotov": [
@@ -515,7 +515,7 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=123s"
       }
     ]
   }
