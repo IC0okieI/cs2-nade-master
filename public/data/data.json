@@ -223,7 +223,7 @@
         "title": "Long Flash from CT #1",
         "description": "Flash for supporting mates who take long",
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup01.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup01.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-position01.jpg",
         "technique": {
           "jump": false,
           "mouseButton": "l",
@@ -236,7 +236,7 @@
         "title": "Long Flash from CT #2",
         "description": "Flash for supporting mates who take long",
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup02.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-lineup02.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/dust2/long-flash-position02.jpg",
         "technique": {
           "jump": true,
           "mouseButton": "l",
