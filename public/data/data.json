@@ -486,6 +486,19 @@
         },
         "movement": "s",
         "url": ""
+      },
+      {
+        "title": "Mid Flash from Window",
+        "description": "Flash against Elbow for taking fast Mid control as CT.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/elbow-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/elbow-flash-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
       }
     ],
     "he": [
