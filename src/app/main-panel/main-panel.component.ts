@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -24,12 +23,13 @@ interface UtilityData {
 @Component({
   selector: 'app-main-panel',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [CommonModule],
   templateUrl: './main-panel.component.html',
   styleUrl: './main-panel.component.css'
 })
 export class MainPanelComponent implements OnInit {
   title = 'NadeHelper';
+  isDarkMode = true; // Default to dark mode
 
   utilityData: UtilityData = {};
   currentUtility = 'smokes';
@@ -61,6 +61,7 @@ export class MainPanelComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
+    this.loadSavedTheme();
     this.loadData();
   }
 
@@ -195,5 +196,28 @@ export class MainPanelComponent implements OnInit {
       transform: `scale(${zoomLevel})`,
       'transform-origin': 'center center'
     };
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    this.applyTheme();
+    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  }
+
+  private loadSavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      this.isDarkMode = savedTheme === 'dark';
+    }
+    this.applyTheme();
+  }
+
+  private applyTheme() {
+    // Apply theme to document for global styles (background)
+    if (this.isDarkMode) {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
   }
 }

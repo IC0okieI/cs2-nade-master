@@ -1,6 +1,9 @@
-<div class="container">
+<div class="container" [attr.data-theme]="isDarkMode ? null : 'light'">
     <div class="header">
         <h1>CS2 Utility Master</h1>
+        <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+            <span class="theme-icon">{{isDarkMode ? '☀️' : '🌙'}}</span>
+        </button>
     </div>
 
     <div class="main-content">
