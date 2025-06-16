@@ -455,7 +455,7 @@
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/cave-self-pop-flash-position.jpg",
         "technique": {
           "jump": true,
-          "mouseButton": "l",
+          "mouseButton": "r",
           "crouch": true
         },
         "movement": "s",
