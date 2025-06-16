@@ -4,7 +4,7 @@
       {
         "title": "CT Smoke from T-Spawn",
         "description": "Smoke that blocks CT from A site",
-        "positionImage": "https://picsum.photos/600/400?random=4",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-position.jpg",
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-lineup.jpg",
         "technique": {
           "jump": true,
