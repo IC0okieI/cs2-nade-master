@@ -54,6 +54,10 @@
                                     <span class="tag-icon">↑</span>
                                     <span class="tag-label">Jump</span>
                                 </span>
+                                <span class="tag crouch-tag" *ngIf="lineup.technique.crouch">
+                                    <span class="tag-icon">↓</span>
+                                    <span class="tag-label">Crouch</span>
+                                </span>
                                 <span class="tag mouse-tag">
                                     <span class="tag-icon">{{getMouseButtonIcon(lineup.technique.mouseButton)}}</span>
                                 </span>

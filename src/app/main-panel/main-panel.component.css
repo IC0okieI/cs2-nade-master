@@ -305,6 +305,24 @@
     box-shadow: 0 0 6px rgba(255, 193, 7, 0.3);
 }
 
+.crouch-tag {
+    background: rgba(138, 43, 226, 0.2);
+    border-color: rgba(138, 43, 226, 0.4);
+    color: #9966cc;
+}
+
+.container[data-theme="light"] .crouch-tag {
+    background: rgba(138, 43, 226, 0.15);
+    border-color: rgba(138, 43, 226, 0.3);
+    color: #8a2be2;
+}
+
+.crouch-tag.active {
+    background: rgba(138, 43, 226, 0.4);
+    border-color: #9966cc;
+    box-shadow: 0 0 6px rgba(138, 43, 226, 0.3);
+}
+
 .mouse-tag {
     background: rgba(108, 117, 125, 0.2);
     border-color: rgba(108, 117, 125, 0.4);
