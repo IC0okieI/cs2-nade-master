@@ -69,7 +69,7 @@ export class MainPanelComponent implements OnInit {
       this.isLoading = true;
       this.loadError = false;
 
-      this.utilityData = await this.http.get<UtilityData>('https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/data/data.json').toPromise() || {};
+      this.utilityData = await this.http.get<UtilityData>('https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/refs/heads/images/data/data.json').toPromise() || {};
       this.updateContent();
     } catch (error) {
       console.error('Failed to load utility data:', error);
