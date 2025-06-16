@@ -259,8 +259,7 @@
         "url": ""
       }
     ],
-    "he": [
-    ],
+    "he": [],
     "molotov": [
       {
         "title": "Short Molotov from Toxic",
@@ -316,9 +315,208 @@
     "molotov": []
   },
   "ancient": {
-    "smokes": [],
-    "flashes": [],
-    "he": [],
-    "molotov": []
+    "smokes": [
+      {
+        "title": "Instant Mid Smoke from CT Spawn #5",
+        "description": "Instant Mid smoke from spawn number 5. For taking fast mid control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/instant-mid-smoke01-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/instant-mid-smokes-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "w",
+        "url": ""
+      },
+      {
+        "title": "Instant Mid Smoke from CT Spawn #4",
+        "description": "Instant Mid smoke from spawn number 4. For taking fast mid control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/instant-mid-smoke02-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/instant-mid-smokes-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "w",
+        "url": ""
+      },
+      {
+        "title": "B-Long Smoke from B-Main",
+        "description": "Smoke that blocks Long from B site.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/b-long-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/b-long-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "B-Short Smoke from B-Main",
+        "description": "Smoke that blocks Short from B site.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/b-short-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/b-short-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Mid-Window Smoke from T-Spawn",
+        "description": "Smoke that block seight from Window to Mid.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mid-window-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mid-window-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Fast Donut Smoke from A-Main",
+        "description": "Very fast Donut Smoke for A-Rushes.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/fast-donut-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/fast-donut-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": ""
+      },
+      {
+        "title": "Donut Smoke from A-Main",
+        "description": "Donut Smoke that blocks seight from Donut to A-Site.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/donut-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/donut-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "CT-Smoke from A-Main",
+        "description": "Smoke that blocks seight from CT to A-Site.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ct-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ct-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "B-Main Smoke from CT-Spawn",
+        "description": "Smoke that blocks B-Main for taking fast Ramp Control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/b-main-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/b-main-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": ""
+      },
+      {
+        "title": "Heaven Smoke from T-Spawn",
+        "description": "Smoke that blocks CTs from Mid-JumpUp for fast Cave Control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/heaven-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/heaven-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ],
+    "flashes": [
+      {
+        "title": "Cave Self-Pop-Flash",
+        "description": "Flash for taking Deep-Cave Control, which not blinds yourself.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/cave-self-pop-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/cave-self-pop-flash-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Cave Pop-Flash",
+        "description": "Pop flash for taking Cave.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/cave-pop-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/cave-pop-flash-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Mid Flash from T-Spawn",
+        "description": "Mid Flash from T-Spawn",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mid-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mid-flash-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ],
+    "he": [
+      {
+        "title": "Banana HE-Gerande",
+        "description": "HE-Grenade to catch T's from rushing Cave of Heaven.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/banana-he-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/banana-he-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": ""
+      }
+    ],
+    "molotov": [
+      {
+        "title": "Fast Banana Molotov",
+        "description": "Fast Banana Molotov for Cave Control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/banana-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/banana-molotov-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "lr",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": ""
+      }
+    ]
   }
 }

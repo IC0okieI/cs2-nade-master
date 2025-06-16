@@ -115,14 +115,20 @@
             <p class="entry-description">{{entry.description}}</p>
 
             <div class="entry-technique">
-              <span class="technique-item" *ngIf="entry.technique.jump">
-                <strong>Jump:</strong> Required
+              <span class="technique-item">
+                <strong>Jump:</strong> {{entry.technique.jump ? 'Required' : 'Not Required'}}
+              </span>
+              <span class="technique-item">
+                <strong>Crouch:</strong> {{entry.technique.crouch ? 'Required' : 'Not Required'}}
               </span>
               <span class="technique-item">
                 <strong>Mouse:</strong> {{getMouseButtonName(entry.technique.mouseButton)}}
               </span>
               <span class="technique-item">
                 <strong>Movement:</strong> {{getMovementName(entry.movement)}}
+              </span>
+              <span class="technique-item" *ngIf="entry.url">
+                <strong>URL:</strong> <a [href]="entry.url" target="_blank">{{entry.url}}</a>
               </span>
             </div>
           </div>
@@ -162,6 +168,12 @@
           <textarea id="description" formControlName="description" class="form-control"
                     rows="3" placeholder="Describe the lineup and its purpose"></textarea>
         </div>
+
+        <div class="form-group">
+          <label for="url">URL (Optional)</label>
+          <input type="text" id="url" formControlName="url" class="form-control"
+                 placeholder="e.g., https://youtube.com/watch?v=example">
+        </div>
       </div>
 
       <div class="form-section">
@@ -200,6 +212,14 @@
               <input type="checkbox" formControlName="jump" class="checkbox">
               <span class="checkmark"></span>
               Requires Jump
+            </label>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" formControlName="crouch" class="checkbox">
+              <span class="checkmark"></span>
+              Requires Crouch
             </label>
           </div>
 

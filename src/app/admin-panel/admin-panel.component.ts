@@ -11,8 +11,10 @@ interface Lineup {
   technique: {
     jump: boolean;
     mouseButton: 'l' | 'r' | 'lr';
+    crouch: boolean;
   };
   movement: 's' | 'w' | 'r';
+  url: string;
 }
 
 interface UtilityData {
@@ -110,8 +112,10 @@ export class AdminPanelComponent implements OnInit {
       lineupImage: [''],
       positionImage: [''],
       jump: [false],
+      crouch: [false],
       mouseButton: ['l', Validators.required],
-      movement: ['s', Validators.required]
+      movement: ['s', Validators.required],
+      url: ['']
     });
 
     // Subscribe to changes to save state
@@ -238,6 +242,12 @@ export class AdminPanelComponent implements OnInit {
         this.utilityData[map][utility].forEach((lineup, index) => {
           this.flattenedEntries.push({
             ...lineup,
+            technique: {
+              jump: lineup.technique?.jump || false,
+              mouseButton: lineup.technique?.mouseButton || 'l',
+              crouch: lineup.technique?.crouch || false
+            },
+            url: lineup.url || '',
             map,
             utility,
             index
@@ -328,9 +338,11 @@ export class AdminPanelComponent implements OnInit {
         positionImage: positionImage || 'https://picsum.photos/300/200?random=3',
         technique: {
           jump: formValue.jump,
-          mouseButton: formValue.mouseButton
+          mouseButton: formValue.mouseButton,
+          crouch: formValue.crouch
         },
-        movement: formValue.movement
+        movement: formValue.movement,
+        url: formValue.url || ''
       };
 
       // Initialize map and utility arrays if they don't exist
@@ -353,8 +365,10 @@ export class AdminPanelComponent implements OnInit {
         map: this.lastMap,
         utility: this.lastUtility,
         jump: false,
+        crouch: false,
         mouseButton: 'l',
-        movement: 's'
+        movement: 's',
+        url: ''
       });
 
       console.log('Updated data:', this.utilityData);
@@ -362,7 +376,9 @@ export class AdminPanelComponent implements OnInit {
   }
 
   async exportData() {
-    const dataStr = JSON.stringify(this.utilityData, null, 2);
+    // Normalize the data to ensure all entries have consistent structure
+    const normalizedData = this.normalizeDataForExport(this.utilityData);
+    const dataStr = JSON.stringify(normalizedData, null, 2);
 
     // Check if the File System Access API is supported
     if ('showSaveFilePicker' in window) {
@@ -401,6 +417,27 @@ export class AdminPanelComponent implements OnInit {
       link.click();
       URL.revokeObjectURL(url);
     }
+  }
+
+  private normalizeDataForExport(data: UtilityData): UtilityData {
+    const normalizedData: UtilityData = {};
+
+    Object.keys(data).forEach(map => {
+      normalizedData[map] = {};
+      Object.keys(data[map]).forEach(utility => {
+        normalizedData[map][utility] = data[map][utility].map(lineup => ({
+          ...lineup,
+          technique: {
+            jump: lineup.technique?.jump || false,
+            mouseButton: lineup.technique?.mouseButton || 'l',
+            crouch: lineup.technique?.crouch || false
+          },
+          url: lineup.url || ''
+        }));
+      });
+    });
+
+    return normalizedData;
   }
 
   getUtilityFilterKeyword(utility: string): string {

@@ -70,9 +70,9 @@ export class MainPanelComponent implements OnInit {
       this.loadError = false;
 
       const timestamp = Date.now();
-      this.utilityData = await this.http.get<UtilityData>(`https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/public/data/data.json?ts=${timestamp}`).toPromise() || {};
+      // this.utilityData = await this.http.get<UtilityData>(`https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/public/data/data.json?ts=${timestamp}`).toPromise() || {};
 
-      // this.utilityData = await this.http.get<UtilityData>('data/data.json').toPromise() || {};
+      this.utilityData = await this.http.get<UtilityData>('data/data.json').toPromise() || {};
 
       this.updateContent();
     } catch (error) {
