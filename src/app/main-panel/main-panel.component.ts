@@ -32,6 +32,7 @@ interface UtilityData {
 export class MainPanelComponent implements OnInit {
   title = 'NadeHelper';
   isDarkMode = true; // Default to dark mode
+  isCompactView = false; // New property for view toggle
 
   utilityData: UtilityData = {};
   currentUtility = 'smokes';
@@ -204,6 +205,10 @@ export class MainPanelComponent implements OnInit {
     this.isDarkMode = !this.isDarkMode;
     this.applyTheme();
     localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  }
+
+  toggleView() {
+    this.isCompactView = !this.isCompactView;
   }
 
   hasYouTubeUrl(lineup: Lineup): boolean {
