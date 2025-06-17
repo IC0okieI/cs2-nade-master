@@ -303,10 +303,222 @@
     ]
   },
   "inferno": {
-    "smokes": [],
-    "flashes": [],
-    "he": [],
-    "molotov": []
+    "smokes": [
+      {
+        "title": "Long Smoke from 2nd Mid",
+        "description": "Long Smoke for taking Mid control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/long-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/long-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Moto Smoke from 2nd Mid",
+        "description": "Smoke that blocks Moto from A-Site.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/moto-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/moto-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Arch Smoke from 2nd Mid",
+        "description": "Smoke that blocks Arch from Long.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/arch-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/arch-smoke-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "CT Smoke from Banana",
+        "description": "CT-Smoke that also blocks the boost spot.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/ct-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/ct-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Construction Smoke",
+        "description": "Construction Smoke that should also block the jump up.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/construction-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/construction-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": true
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Deep Mid Smoke from CT-Spawn",
+        "description": "Deep Mid Smoke for fast control Mid or Banana.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/deep-mid-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/deep-mid-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ],
+    "flashes": [
+      {
+        "title": "Fallen Flash Banana",
+        "description": "Pop-Flash for taking Banana.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/fallen-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/fallen-flash-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "lr",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Apps Flash",
+        "description": "Flash against Long and Pit.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/apps-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/apps-flash-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": true
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Mid Pop-Flash",
+        "description": "Pop-Flash against Long and Short.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/mid-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/mid-flash-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "B Retake Flash",
+        "description": "Flash for retaking Upper Banana control.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/b-retake-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/b-retake-flash-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "B self Pop-Flash",
+        "description": "Pop-Flash for fighting against B-Site and CT.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/b-self-pop-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/b-self-pop-flash-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "r",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ],
+    "he": [
+      {
+        "title": "Car HE",
+        "description": "HE Grenade for Car.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/car-grenade-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/car-grenade-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": ""
+      }
+    ],
+    "molotov": [
+      {
+        "title": "Fast B Apps Molotov",
+        "description": "Molly that blocks entry to Balcony or Anti-Boiler.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/fast-apps-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/fast-apps-molotov-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": ""
+      },
+      {
+        "title": "Quad Molotov",
+        "description": "Molly that forces CTs out of Quad.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/quad-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/quad-molotov-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Dark Molotov",
+        "description": "Molly that forces CTs out of Dark.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/dark-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/dark-molotov-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "First/Second Molotov",
+        "description": "Molly that forces CTs out of First and Second Box.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/quad-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/quad-molotov-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ]
   },
   "anubis": {
     "smokes": [],

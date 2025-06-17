@@ -316,19 +316,11 @@ export class AdminPanelComponent implements OnInit {
       let positionImage = formValue.positionImage;
 
       if (lineupImage && this.imagePathPrefix && !lineupImage.startsWith('http')) {
-        const cleanPrefix = this.imagePathPrefix.replace(/\/$/, '');
-        if (!lineupImage.startsWith(cleanPrefix)) {
-          const cleanImagePath = lineupImage.replace(/^\//, '');
-          lineupImage = `${cleanPrefix}/${cleanImagePath}`;
-        }
+        lineupImage = this.applyPrefixToPath(lineupImage, formValue.map);
       }
 
       if (positionImage && this.imagePathPrefix && !positionImage.startsWith('http')) {
-        const cleanPrefix = this.imagePathPrefix.replace(/\/$/, '');
-        if (!positionImage.startsWith(cleanPrefix)) {
-          const cleanImagePath = positionImage.replace(/^\//, '');
-          positionImage = `${cleanPrefix}/${cleanImagePath}`;
-        }
+        positionImage = this.applyPrefixToPath(positionImage, formValue.map);
       }
 
       const newLineup: Lineup = {
@@ -583,17 +575,18 @@ export class AdminPanelComponent implements OnInit {
     }
 
     const selectedNade = this.groupedNades[selectedIndex];
+    const currentMap = this.nadeForm.get('map')?.value;
 
     // Apply prefix to both image paths
     let lineupPath = '';
     let positionPath = '';
 
     if (selectedNade.lineupImage) {
-      lineupPath = this.applyPrefixToPath(selectedNade.lineupImage);
+      lineupPath = this.applyPrefixToPath(selectedNade.lineupImage, currentMap);
     }
 
     if (selectedNade.positionImage) {
-      positionPath = this.applyPrefixToPath(selectedNade.positionImage);
+      positionPath = this.applyPrefixToPath(selectedNade.positionImage, currentMap);
     }
 
     // Set both form controls
@@ -613,11 +606,17 @@ export class AdminPanelComponent implements OnInit {
     this.message = `Set ${setPaths.join(' and ')} image(s) for: ${selectedNade.baseName}`;
   }
 
-  private applyPrefixToPath(imagePath: string): string {
+  private applyPrefixToPath(imagePath: string, mapName?: string): string {
     if (this.imagePathPrefix) {
       const cleanPrefix = this.imagePathPrefix.replace(/\/$/, '');
       const cleanImageName = imagePath.replace(/^\//, '');
-      return `${cleanPrefix}/${cleanImageName}`;
+      const mapFolder = mapName ? mapName.toLowerCase() : '';
+
+      if (mapFolder) {
+        return `${cleanPrefix}/${mapFolder}/${cleanImageName}`;
+      } else {
+        return `${cleanPrefix}/${cleanImageName}`;
+      }
     }
     return imagePath;
   }
