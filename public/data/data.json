@@ -349,7 +349,7 @@
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/ct-smoke-lineup.jpg",
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/inferno/ct-smoke-position.jpg",
         "technique": {
-          "jump": true,
+          "jump": false,
           "mouseButton": "l",
           "crouch": false
         },
