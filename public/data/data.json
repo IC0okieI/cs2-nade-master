@@ -521,10 +521,156 @@
     ]
   },
   "anubis": {
-    "smokes": [],
-    "flashes": [],
+    "smokes": [
+      {
+        "title": "Window Smoke",
+        "description": "Smoke that blocks Window from Mid.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/window-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/window-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Connector Smoke",
+        "description": "Smoke that blocks Connector from Water.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/connector-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/connector-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Mid-Temple Smoke",
+        "description": "Smoke that blocks Temple from Mid.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/mid-temple-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/mid-temple-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "CT Smoke",
+        "description": "Smoke that blocks the left side of the B-Spot.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/ct-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/ct-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Back Site Smoke",
+        "description": "Smoke that blocks the right side of the B-Spot",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/back-site-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/ct-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": true
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Camera Smoke",
+        "description": "Camera Smoke from Water, that blocks entry from Mid.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/camera-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/camera-smoke-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Heaven Smoke",
+        "description": "Smoke from Water wich blocks Heaven from A-Site.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/heaven-smoke-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/heaven-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ],
+    "flashes": [
+      {
+        "title": "B-Main Flash",
+        "description": "Pop-Flash for fighting B-Main.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/b-main-flash-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/b-main-flash-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ],
     "he": [],
-    "molotov": []
+    "molotov": [
+      {
+        "title": "Mid-Doors Molotov",
+        "description": "Molotov for pushing the CTs out from Mid-Doors.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/mid-doors-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/mid-doors-molotov-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "Pillar Molotov",
+        "description": "Molotov which burns Pillar and Connector Entry.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/pillar-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/ct-smoke-position.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      },
+      {
+        "title": "broky Molotov",
+        "description": "Molotov which burns broky and Cam entry.",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/broky-molotov-lineup.jpg",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/anubis/camera-smoke-position.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": ""
+      }
+    ]
   },
   "ancient": {
     "smokes": [
