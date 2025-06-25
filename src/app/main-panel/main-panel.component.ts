@@ -14,6 +14,7 @@ interface Lineup {
   };
   movement: 's' | 'w' | 'r';
   url: string;
+  smokeBundle: string;
 }
 
 interface UtilityData {
@@ -221,6 +222,14 @@ export class MainPanelComponent implements OnInit {
     if (youtubeUrl) {
       window.open(youtubeUrl, '_blank');
     }
+  }
+
+  isSmokeBundle(lineup: Lineup): boolean {
+    return lineup.smokeBundle != null && lineup.smokeBundle.trim() !== '';
+  }
+
+  getBundleImage(lineup: Lineup): string {
+    return this.isSmokeBundle(lineup) ? lineup.smokeBundle : lineup.lineupImage;
   }
 
   private loadSavedTheme() {

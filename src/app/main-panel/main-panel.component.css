@@ -568,6 +568,14 @@
     color: #28a745;
 }
 
+.bundle-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
     .theme-toggle {
         top: 15px;

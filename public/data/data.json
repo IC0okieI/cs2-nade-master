@@ -2,6 +2,20 @@
   "mirage": {
     "smokes": [
       {
+        "title": "Instant Window Smokes",
+        "description": "A bundle of instant window smokes.",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-lineup.jpg",
+        "technique": {
+          "jump": true,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "r",
+        "url": "",
+        "smokeBundle": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/instant-window-smoke-bundle.png"
+      },
+      {
         "title": "CT Smoke from T-Spawn",
         "description": "Smoke that blocks CT from A site",
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/ct-smoke-position.jpg",
@@ -12,7 +26,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Stairs Smoke from T-Spawn",
@@ -25,7 +40,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Jungle Smoke from T-Spawn",
@@ -38,7 +54,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Window Smoke from T-Spawn",
@@ -51,7 +68,8 @@
           "crouch": false
         },
         "movement": "w",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY",
+        "smokeBundle": ""
       }
     ],
     "flashes": [
@@ -66,7 +84,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Connector Flash from Top Mid",
@@ -79,7 +98,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B-Site Flash from T-Apps",
@@ -92,7 +112,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=14s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=14s",
+        "smokeBundle": ""
       }
     ],
     "he": [],
@@ -111,7 +132,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=19s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=19s",
+        "smokeBundle": ""
       },
       {
         "title": "Mid-Doors Smoke from Toxic",
@@ -124,7 +146,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Long Doors Smoke from CT-Spawn",
@@ -137,7 +160,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Long-Corner Smoke from T-Spawn",
@@ -150,7 +174,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "CT-Cross-Smoke from XBox",
@@ -163,7 +188,8 @@
           "crouch": true
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B Doors Smoke from Tunnel",
@@ -176,7 +202,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "First Short Smoke from Short",
@@ -189,7 +216,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Second Short Smoke from Short",
@@ -202,7 +230,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "flashes": [
@@ -217,7 +246,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Long Flash from CT #1",
@@ -230,7 +260,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Long Flash from CT #2",
@@ -243,7 +274,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B-Spot Flash from Tunnel",
@@ -256,7 +288,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=34s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=34s",
+        "smokeBundle": ""
       }
     ],
     "he": [],
@@ -272,7 +305,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Blue Molotov from Long",
@@ -285,7 +319,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=41s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=41s",
+        "smokeBundle": ""
       },
       {
         "title": "A-Site Molotov from Short",
@@ -298,7 +333,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ]
   },
@@ -315,7 +351,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Moto Smoke from 2nd Mid",
@@ -328,7 +365,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Arch Smoke from 2nd Mid",
@@ -341,7 +379,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "CT Smoke from Banana",
@@ -354,7 +393,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Construction Smoke",
@@ -367,7 +407,8 @@
           "crouch": true
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Deep Mid Smoke from CT-Spawn",
@@ -380,7 +421,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "flashes": [
@@ -395,7 +437,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Apps Flash",
@@ -408,7 +451,8 @@
           "crouch": true
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Mid Pop-Flash",
@@ -421,7 +465,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B Retake Flash",
@@ -434,7 +479,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B self Pop-Flash",
@@ -447,7 +493,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "he": [
@@ -462,7 +509,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "molotov": [
@@ -477,7 +525,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Quad Molotov",
@@ -490,7 +539,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Dark Molotov",
@@ -503,7 +553,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "First/Second Molotov",
@@ -516,7 +567,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ]
   },
@@ -533,7 +585,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Connector Smoke",
@@ -546,7 +599,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Mid-Temple Smoke",
@@ -559,7 +613,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "CT Smoke",
@@ -572,7 +627,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Back Site Smoke",
@@ -585,7 +641,8 @@
           "crouch": true
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Camera Smoke",
@@ -598,7 +655,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Heaven Smoke",
@@ -611,7 +669,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "flashes": [
@@ -626,7 +685,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "he": [],
@@ -642,7 +702,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Pillar Molotov",
@@ -655,7 +716,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "broky Molotov",
@@ -668,7 +730,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ]
   },
@@ -685,7 +748,8 @@
           "crouch": false
         },
         "movement": "w",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=89s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=89s",
+        "smokeBundle": ""
       },
       {
         "title": "Instant Mid Smoke from CT Spawn #4",
@@ -698,7 +762,8 @@
           "crouch": false
         },
         "movement": "w",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=100s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=100s",
+        "smokeBundle": ""
       },
       {
         "title": "B-Long Smoke from B-Main",
@@ -711,7 +776,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B-Short Smoke from B-Main",
@@ -724,7 +790,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Mid-Window Smoke from T-Spawn",
@@ -737,7 +804,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Fast Donut Smoke from A-Main",
@@ -750,7 +818,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=72s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=72s",
+        "smokeBundle": ""
       },
       {
         "title": "Donut Smoke from A-Main",
@@ -763,7 +832,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "CT-Smoke from A-Main",
@@ -776,7 +846,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "B-Main Smoke from CT-Spawn",
@@ -789,7 +860,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=57s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=57s",
+        "smokeBundle": ""
       },
       {
         "title": "Heaven Smoke from T-Spawn",
@@ -802,7 +874,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "flashes": [
@@ -817,7 +890,8 @@
           "crouch": true
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Cave Pop-Flash",
@@ -830,7 +904,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Mid Flash from T-Spawn",
@@ -843,7 +918,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       },
       {
         "title": "Mid Flash from Window",
@@ -856,7 +932,8 @@
           "crouch": false
         },
         "movement": "s",
-        "url": ""
+        "url": "",
+        "smokeBundle": ""
       }
     ],
     "he": [
@@ -871,7 +948,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=112s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=112s",
+        "smokeBundle": ""
       }
     ],
     "molotov": [
@@ -886,7 +964,8 @@
           "crouch": false
         },
         "movement": "r",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=123s"
+        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=123s",
+        "smokeBundle": ""
       }
     ]
   }

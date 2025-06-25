@@ -109,19 +109,28 @@
                             </div>
                         </div>
                         <div class="lineup-images">
-                            <div class="lineup-main-image">
-                                <img #mainImg
-                                     [src]="lineup.lineupImage"
-                                     [alt]="lineup.title + ' lineup'"
-                                     class="lineup-screenshot"
-                                     [ngStyle]="getMainImageStyle(lineup, mainImg.src)">
+                            <!-- Smoke Bundle - Single Image -->
+                            <div *ngIf="isSmokeBundle(lineup)" class="lineup-main-image">
+                                <img [src]="getBundleImage(lineup)"
+                                     [alt]="lineup.title + ' smoke bundle'"
+                                     class="lineup-screenshot bundle-image">
                             </div>
-                            <div class="position-image" (click)="toggleImage(lineup, $event)">
-                                <img #posImg
-                                     [src]="lineup.positionImage"
-                                     [alt]="lineup.title + ' position'"
-                                     class="position-screenshot"
-                                     [ngStyle]="getSmallImageStyle(lineup, mainImg.src)">
+                            <!-- Regular Entry - Two Images -->
+                            <div *ngIf="!isSmokeBundle(lineup)">
+                                <div class="lineup-main-image">
+                                    <img #mainImg
+                                         [src]="lineup.lineupImage"
+                                         [alt]="lineup.title + ' lineup'"
+                                         class="lineup-screenshot"
+                                         [ngStyle]="getMainImageStyle(lineup, mainImg.src)">
+                                </div>
+                                <div class="position-image" (click)="toggleImage(lineup, $event)">
+                                    <img #posImg
+                                         [src]="lineup.positionImage"
+                                         [alt]="lineup.title + ' position'"
+                                         class="position-screenshot"
+                                         [ngStyle]="getSmallImageStyle(lineup, mainImg.src)">
+                                </div>
                             </div>
                             <div *ngIf="hasYouTubeUrl(lineup)"
                                  class="youtube-icon"

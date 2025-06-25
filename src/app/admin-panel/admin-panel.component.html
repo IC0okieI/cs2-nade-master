@@ -130,6 +130,9 @@
               <span class="technique-item" *ngIf="entry.url">
                 <strong>URL:</strong> <a [href]="entry.url" target="_blank">{{entry.url}}</a>
               </span>
+              <span class="technique-item" *ngIf="entry.smokeBundle">
+                <strong>Smoke Bundle:</strong> {{entry.smokeBundle}}
+              </span>
             </div>
           </div>
         </div>
@@ -173,6 +176,13 @@
           <label for="url">URL (Optional)</label>
           <input type="text" id="url" formControlName="url" class="form-control"
                  placeholder="e.g., https://youtube.com/watch?v=example">
+        </div>
+
+        <div class="form-group">
+          <label for="smokeBundle">Smoke Bundle (Optional)</label>
+          <input type="text" id="smokeBundle" formControlName="smokeBundle" class="form-control"
+                 placeholder="Path to single image for smoke bundle (replaces lineup/position images)">
+          <small class="prefix-help">If provided, this single image will be used instead of separate lineup and position images</small>
         </div>
       </div>
 

@@ -15,6 +15,7 @@ interface Lineup {
   };
   movement: 's' | 'w' | 'r';
   url: string;
+  smokeBundle: string;
 }
 
 interface UtilityData {
@@ -115,7 +116,8 @@ export class AdminPanelComponent implements OnInit {
       crouch: [false],
       mouseButton: ['l', Validators.required],
       movement: ['s', Validators.required],
-      url: ['']
+      url: [''],
+      smokeBundle: ['']
     });
 
     // Subscribe to changes to save state
@@ -248,6 +250,7 @@ export class AdminPanelComponent implements OnInit {
               crouch: lineup.technique?.crouch || false
             },
             url: lineup.url || '',
+            smokeBundle: lineup.smokeBundle || '',
             map,
             utility,
             index
@@ -334,7 +337,8 @@ export class AdminPanelComponent implements OnInit {
           crouch: formValue.crouch
         },
         movement: formValue.movement,
-        url: formValue.url || ''
+        url: formValue.url || '',
+        smokeBundle: formValue.smokeBundle || ''
       };
 
       // Initialize map and utility arrays if they don't exist
@@ -360,7 +364,8 @@ export class AdminPanelComponent implements OnInit {
         crouch: false,
         mouseButton: 'l',
         movement: 's',
-        url: ''
+        url: '',
+        smokeBundle: ''
       });
 
       console.log('Updated data:', this.utilityData);
@@ -424,7 +429,8 @@ export class AdminPanelComponent implements OnInit {
             mouseButton: lineup.technique?.mouseButton || 'l',
             crouch: lineup.technique?.crouch || false
           },
-          url: lineup.url || ''
+          url: lineup.url || '',
+          smokeBundle: lineup.smokeBundle || ''
         }));
       });
     });
