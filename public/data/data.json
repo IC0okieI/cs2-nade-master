@@ -58,6 +58,20 @@
         "smokeBundle": ""
       },
       {
+        "title": "Jungle Smoke from T-Spawn #2",
+        "description": "Smoke that lands higher and bleeds into jungle to block seight to Palace from Jungle.",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-position02.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-lineup02.jpg",
+        "technique": {
+          "jump": false,
+          "mouseButton": "l",
+          "crouch": false
+        },
+        "movement": "s",
+        "url": "",
+        "smokeBundle": ""
+      },
+      {
         "title": "Window Smoke from T-Spawn",
         "description": "Smoke that blocks Window from peeking mid",
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/window-smoke-position.jpg",
