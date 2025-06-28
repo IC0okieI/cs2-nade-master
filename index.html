@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CS2 Data Server</title>
+</head>
+<body>
+    <h1>CS2 Nade Master - Pi Server</h1>
+    <p>Data endpoint: <a href="./data/data.json">./data/data.json</a></p>
+    <p>Images are served directly from ./images/ directory</p>
+    
+    <script>
+        // Simple router to handle requests
+        const path = window.location.pathname;
+        
+        // If requesting data.json directly
+        if (path.endsWith('data.json')) {
+            fetch('./data/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.body.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                })
+                .catch(err => {
+                    document.body.innerHTML = '<h1>Error loading data.json</h1>';
+                });
+        }
+    </script>
+</body>
+</html>
