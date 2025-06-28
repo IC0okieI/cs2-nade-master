@@ -76,7 +76,7 @@ export class MainPanelComponent implements OnInit {
 
       const timestamp = Date.now();
       // this.utilityData = await this.http.get<UtilityData>(`https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/master/public/data/data.json?ts=${timestamp}`).toPromise() || {};
-      this.utilityData = await this.http.get<UtilityData>(`http://lanstrikebruch.ddns.net/cs2-nade-master/master/public/data/data.json?ts=${timestamp}`).toPromise() || {};
+      this.utilityData = await this.http.get<UtilityData>(`http://lanstrikebruch.ddns.net/cs2-nade-master/data.json`).toPromise() || {};
 
       // this.utilityData = await this.http.get<UtilityData>('data/data.json').toPromise() || {};
 
