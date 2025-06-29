@@ -752,32 +752,18 @@
   "ancient": {
     "smokes": [
       {
-        "title": "Instant Mid Smoke from CT Spawn #5",
-        "description": "Instant Mid smoke from spawn number 5. For taking fast mid control.",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/instant-mid-smoke01-lineup.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/instant-mid-smokes-position.jpg",
+        "title": "Instant Elbow Smokes",
+        "description": "A bundle of instant elbow smokes.",
+        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/ct-smoke-position.jpg",
+        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/ct-smoke-lineup.jpg",
         "technique": {
           "jump": true,
           "mouseButton": "l",
           "crouch": false
         },
         "movement": "w",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=89s",
-        "smokeBundle": ""
-      },
-      {
-        "title": "Instant Mid Smoke from CT Spawn #4",
-        "description": "Instant Mid smoke from spawn number 4. For taking fast mid control.",
-        "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/instant-mid-smoke02-lineup.jpg",
-        "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/instant-mid-smokes-position.jpg",
-        "technique": {
-          "jump": true,
-          "mouseButton": "l",
-          "crouch": false
-        },
-        "movement": "w",
-        "url": "https://www.youtube.com/watch?v=1i3IHufKKHY&t=100s",
-        "smokeBundle": ""
+        "url": "",
+        "smokeBundle": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/ancient/instant-elbow-smoke-bundle.png"
       },
       {
         "title": "B-Long Smoke from B-Main",
