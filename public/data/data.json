@@ -63,7 +63,7 @@
         "positionImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-position02.jpg",
         "lineupImage": "https://raw.githubusercontent.com/IC0okieI/cs2-nade-master/images/mirage/jungle-smoke-lineup02.jpg",
         "technique": {
-          "jump": false,
+          "jump": true,
           "mouseButton": "l",
           "crouch": false
         },
