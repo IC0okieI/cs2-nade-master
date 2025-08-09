@@ -34,6 +34,7 @@ export class MainPanelComponent implements OnInit {
   title = 'NadeHelper';
   isDarkMode = true; // Default to dark mode
   isCompactView = false; // New property for view toggle
+  expandedLineupIndex: number | null = null; // Track which lineup is expanded in compact view
 
   utilityData: UtilityData = {};
   currentUtility = 'smokes';
@@ -111,7 +112,7 @@ export class MainPanelComponent implements OnInit {
 
   toggleImage(lineup: Lineup, event: Event) {
     const target = event.target as HTMLElement;
-    const card = target.closest('.lineup-card');
+    const card = target.closest('.lineup-card') || target.closest('.lineup-compact');
     if (!card) return;
 
     const mainImage = card.querySelector('.lineup-screenshot') as HTMLImageElement;
@@ -211,6 +212,12 @@ export class MainPanelComponent implements OnInit {
 
   toggleView() {
     this.isCompactView = !this.isCompactView;
+    // Reset expanded state when switching views
+    this.expandedLineupIndex = null;
+  }
+
+  toggleLineupExpansion(index: number) {
+    this.expandedLineupIndex = this.expandedLineupIndex === index ? null : index;
   }
 
   hasYouTubeUrl(lineup: Lineup): boolean {

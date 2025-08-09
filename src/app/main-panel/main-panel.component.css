@@ -468,8 +468,15 @@
     border-left: 3px solid #4ecdc4;
     transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lineup-compact-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .lineup-compact:hover {
@@ -477,25 +484,17 @@
     transform: translateX(5px);
 }
 
+.lineup-compact.expanded {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+}
+
 .lineup-compact-info {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.lineup-compact-title {
-    font-size: 1.1rem;
-    color: var(--accent-color);
-    margin: 0;
-    font-weight: 600;
-}
-
-.lineup-compact-description {
-    margin: 0;
-    line-height: 1.4;
-    font-size: 0.9rem;
-    opacity: 0.85;
+    cursor: pointer;
 }
 
 .lineup-compact-tags {
@@ -503,69 +502,37 @@
     gap: 6px;
     align-items: center;
     flex-shrink: 0;
-    margin-left: 15px;
 }
 
-.compact-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 2px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 6px;
-    padding: 3px 6px;
-    font-size: 0.65rem;
-    color: var(--text-color);
-    backdrop-filter: blur(5px);
-    white-space: nowrap;
+.lineup-compact.expanded .lineup-compact-tags {
+    margin-left: 0;
+    justify-content: flex-start;
 }
 
-.compact-tag.jump-tag {
-    background: rgba(255, 193, 7, 0.2);
-    border-color: rgba(255, 193, 7, 0.4);
-    color: #ffc107;
+.lineup-expanded-content {
+    margin-top: 15px;
+    animation: slideDown 0.3s ease-out;
 }
 
-.container[data-theme="light"] .compact-tag.jump-tag {
-    background: rgba(255, 193, 7, 0.15);
-    border-color: rgba(255, 193, 7, 0.3);
-    color: #f57c00;
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+        overflow: visible;
+    }
 }
 
-.compact-tag.crouch-tag {
-    background: rgba(138, 43, 226, 0.2);
-    border-color: rgba(138, 43, 226, 0.4);
-    color: #9966cc;
-}
-
-.container[data-theme="light"] .compact-tag.crouch-tag {
-    background: rgba(138, 43, 226, 0.15);
-    border-color: rgba(138, 43, 226, 0.3);
-    color: #8a2be2;
-}
-
-.compact-tag.mouse-tag {
-    background: rgba(108, 117, 125, 0.2);
-    border-color: rgba(108, 117, 125, 0.4);
-    color: #ffc107;
-}
-
-.container[data-theme="light"] .compact-tag.mouse-tag {
-    background: rgba(52, 58, 64, 0.1);
-    border-color: rgba(52, 58, 64, 0.3);
-    color: #495057;
-}
-
-.compact-tag.movement-tag {
-    background: rgba(40, 167, 69, 0.2);
-    border-color: rgba(40, 167, 69, 0.4);
-    color: #6cb074;
-}
-
-.container[data-theme="light"] .compact-tag.movement-tag {
-    background: rgba(40, 167, 69, 0.15);
-    border-color: rgba(40, 167, 69, 0.3);
-    color: #28a745;
+.lineup-expanded-content .lineup-images {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    min-height: 350px;
 }
 
 .bundle-image {
@@ -649,4 +616,66 @@
     .tag-label {
         font-size: 0.6rem;
     }
+}
+
+.compact-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 3px 6px;
+    font-size: 0.65rem;
+    color: var(--text-color);
+    backdrop-filter: blur(5px);
+    white-space: nowrap;
+}
+
+.compact-tag.jump-tag {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: rgba(255, 193, 7, 0.4);
+    color: #ffc107;
+}
+
+.container[data-theme="light"] .compact-tag.jump-tag {
+    background: rgba(255, 193, 7, 0.15);
+    border-color: rgba(255, 193, 7, 0.3);
+    color: #f57c00;
+}
+
+.compact-tag.crouch-tag {
+    background: rgba(138, 43, 226, 0.2);
+    border-color: rgba(138, 43, 226, 0.4);
+    color: #9966cc;
+}
+
+.container[data-theme="light"] .compact-tag.crouch-tag {
+    background: rgba(138, 43, 226, 0.15);
+    border-color: rgba(138, 43, 226, 0.3);
+    color: #8a2be2;
+}
+
+.compact-tag.mouse-tag {
+    background: rgba(108, 117, 125, 0.2);
+    border-color: rgba(108, 117, 125, 0.4);
+    color: #ffc107;
+}
+
+.container[data-theme="light"] .compact-tag.mouse-tag {
+    background: rgba(52, 58, 64, 0.1);
+    border-color: rgba(52, 58, 64, 0.3);
+    color: #495057;
+}
+
+.compact-tag.movement-tag {
+    background: rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.4);
+    color: #6cb074;
+}
+
+.container[data-theme="light"] .compact-tag.movement-tag {
+    background: rgba(40, 167, 69, 0.15);
+    border-color: rgba(40, 167, 69, 0.3);
+    color: #28a745;
 }

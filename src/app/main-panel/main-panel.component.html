@@ -47,33 +47,70 @@
 
                 <!-- Compact View -->
                 <div *ngIf="isCompactView">
-                    <div *ngFor="let lineup of currentLineups" class="lineup-compact">
-                        <div class="lineup-compact-info">
-                            <div class="lineup-compact-title">{{lineup.title}}</div>
-                            <div class="lineup-compact-description">{{lineup.description}}</div>
+                    <div *ngFor="let lineup of currentLineups; let i = index" class="lineup-compact" [class.expanded]="expandedLineupIndex === i">
+                        <div class="lineup-compact-header">
+                            <div class="lineup-compact-info" (click)="toggleLineupExpansion(i)">
+                                <div class="lineup-compact-title">{{lineup.title}}</div>
+                                <div class="lineup-compact-description">{{lineup.description}}</div>
+                            </div>
+                            <div class="lineup-compact-tags">
+                                <span class="compact-tag jump-tag" *ngIf="lineup.technique.jump">
+                                    <span class="tag-icon">↑</span>
+                                    <span class="tag-label">Jump</span>
+                                </span>
+                                <span class="compact-tag crouch-tag" *ngIf="lineup.technique.crouch">
+                                    <span class="tag-icon">↓</span>
+                                    <span class="tag-label">Crouch</span>
+                                </span>
+                                <span class="compact-tag mouse-tag">
+                                    <span class="tag-icon">{{getMouseButtonIcon(lineup.technique.mouseButton)}}</span>
+                                </span>
+                                <span class="compact-tag movement-tag">
+                                    <span class="tag-icon">👟</span>
+                                    <span class="tag-label">{{getMovementText(lineup.movement)}}</span>
+                                </span>
+                                <span *ngIf="hasYouTubeUrl(lineup)"
+                                      class="compact-tag"
+                                      style="cursor: pointer; background: rgba(255, 0, 0, 0.2); border-color: rgba(255, 0, 0, 0.4); color: #ff4444;"
+                                      (click)="openYouTubeUrl(lineup)">
+                                    <span class="tag-icon">📺</span>
+                                </span>
+                            </div>
                         </div>
-                        <div class="lineup-compact-tags">
-                            <span class="compact-tag jump-tag" *ngIf="lineup.technique.jump">
-                                <span class="tag-icon">↑</span>
-                                <span class="tag-label">Jump</span>
-                            </span>
-                            <span class="compact-tag crouch-tag" *ngIf="lineup.technique.crouch">
-                                <span class="tag-icon">↓</span>
-                                <span class="tag-label">Crouch</span>
-                            </span>
-                            <span class="compact-tag mouse-tag">
-                                <span class="tag-icon">{{getMouseButtonIcon(lineup.technique.mouseButton)}}</span>
-                            </span>
-                            <span class="compact-tag movement-tag">
-                                <span class="tag-icon">👟</span>
-                                <span class="tag-label">{{getMovementText(lineup.movement)}}</span>
-                            </span>
-                            <span *ngIf="hasYouTubeUrl(lineup)"
-                                  class="compact-tag"
-                                  style="cursor: pointer; background: rgba(255, 0, 0, 0.2); border-color: rgba(255, 0, 0, 0.4); color: #ff4444;"
-                                  (click)="openYouTubeUrl(lineup)">
-                                <span class="tag-icon">📺</span>
-                            </span>
+                        
+                        <!-- Expanded content -->
+                        <div *ngIf="expandedLineupIndex === i" class="lineup-expanded-content">
+                            <div class="lineup-images">
+                                <!-- Smoke Bundle - Single Image -->
+                                <div *ngIf="isSmokeBundle(lineup)" class="lineup-main-image">
+                                    <img [src]="getBundleImage(lineup)"
+                                         [alt]="lineup.title + ' smoke bundle'"
+                                         class="lineup-screenshot bundle-image">
+                                </div>
+                                <!-- Regular Entry - Two Images -->
+                                <div *ngIf="!isSmokeBundle(lineup)">
+                                    <div class="lineup-main-image">
+                                        <img #mainImg
+                                             [src]="lineup.lineupImage"
+                                             [alt]="lineup.title + ' lineup'"
+                                             class="lineup-screenshot"
+                                             [ngStyle]="getMainImageStyle(lineup, mainImg.src)">
+                                    </div>
+                                    <div class="position-image" (click)="toggleImage(lineup, $event)">
+                                        <img #posImg
+                                             [src]="lineup.positionImage"
+                                             [alt]="lineup.title + ' position'"
+                                             class="position-screenshot"
+                                             [ngStyle]="getSmallImageStyle(lineup, mainImg.src)">
+                                    </div>
+                                </div>
+                                <div *ngIf="hasYouTubeUrl(lineup)"
+                                     class="youtube-icon"
+                                     (click)="openYouTubeUrl(lineup)"
+                                     title="Watch on YouTube">
+                                    <img src="youtube.svg" alt="YouTube">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
